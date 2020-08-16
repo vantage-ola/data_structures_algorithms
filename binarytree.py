@@ -1,14 +1,14 @@
 #binary search trees...it includes insertion,deletion,searching and finding minimum and maximum nodes.
-from treenode import Node
-class Tree:
+from treenode import Node 
+class Tree:   #binary search tree class
     def __init__(self):
         self.root_node = None
-    def findmin(self):
+    def findmin(self):  #find minimum nodes
         current= self.root_node
         while current.left_child:
             current= current.left_child
         return current
-    def insert(self,data):
+    def insert(self,data): #insertion
         node = Node(data)
         if self.root_node is None:
             self.root_node=node
@@ -42,7 +42,7 @@ class Tree:
         
         if parent is None and node is Node:
             return False
-        #So we get the children count
+        #So we get the children count - nil
         children_count = 0
         
         if node.left_child and node.right_child:
@@ -92,7 +92,26 @@ class Tree:
             elif current.data > data:
                 current=  current.left_child
             else:
-                current = current.right_child
-            
+                current = current.right_child    
+    def inorder(self, root_node):   #inorder and infix notation
+        current = root_node 
+        if current is None:
+            return
+        self.inorder(current.left_child)
+        print(current, data)
+        self.inorder(current.right_child)
+    def preorder(self, root_node):      #pre-order transversal and prefix notation
+        current= root_node
+        if current is None:
+            return
+        print(current.data)
+        self.preorder(current.left_child)
+        self.preorder(current.right_child)
+    def postorder(self, root_node):   #post-order transversal and psotfix notation
+        current = root_node
+        if current is None:
+            return
+        self.postorder(current.left_child)
+        self.postorder(current.right_child)
         
-    
+        print(current.data)
