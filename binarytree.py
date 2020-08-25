@@ -1,5 +1,7 @@
 #binary search trees...it includes insertion,deletion,searching and finding minimum and maximum nodes.
-from treenode import Node 
+from treenode import Node
+
+
 class Tree:   #binary search tree class
     def __init__(self):
         self.root_node = None
@@ -98,7 +100,7 @@ class Tree:   #binary search tree class
         if current is None:
             return
         self.inorder(current.left_child)
-        print(current, data)
+        print(current.data)
         self.inorder(current.right_child)
     def preorder(self, root_node):      #pre-order transversal and prefix notation
         current= root_node
@@ -115,3 +117,7 @@ class Tree:   #binary search tree class
         self.postorder(current.right_child)
         
         print(current.data)
+        
+
+
+
