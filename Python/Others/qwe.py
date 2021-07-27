@@ -16,5 +16,5 @@ def wordcount(fname):
                 
     return(count)
 
-count=wordcount('bee_moviescript.txt') 
+count=wordcount('txt_file.txt') 
 filtered = { key:value for key, value in count.items() if value  < 20 and value > 15 } 
