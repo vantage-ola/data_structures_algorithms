@@ -10,8 +10,8 @@ class Tree1:
             list_of_nodes.append(node.data)
        
             if node.left_child:
-                traversal_queue.append(none.left_child)
+                traversal_queue.append(None.left_child)
             if node.right_child:
-                traversal_queue.append(none.right_child)
+                traversal_queue.append(None.right_child)
         return list_of_nodes
     

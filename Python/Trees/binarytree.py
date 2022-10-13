@@ -1,6 +1,11 @@
 #binary search trees...it includes insertion,deletion,searching and finding minimum and maximum nodes.
-from treenode import Node
 
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.right_child = None
+        self.left_child= None
 
 class Tree:   #binary search tree class
     def __init__(self):
